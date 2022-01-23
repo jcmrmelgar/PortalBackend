@@ -18,6 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
+<<<<<<< HEAD
       run: docker build ./AppiCotiza --file Dockerfile --tag '${{env.DOCKER_IMAGE_NAME}}':latest
     - name: Docker Login
       run: docker login --username '${{secrets.DOCKER_LOGIN}}' --password '${{secrets.DOCKER_PASSWORD}}'
@@ -26,3 +27,6 @@ jobs:
     - name: Push the Docker image
       run: docker push '${{secrets.DOCKER_LOGIN}}'/'${{env.DOCKER_IMAGE_NAME}}':latest
 
+=======
+      run: docker build . --file Dockerfile --tag '${{env.DOCKER_IMAGE_NAME}}':latest
+>>>>>>> 9884e36b0859f9a131a5aa2a24f0e4a8f400364c
