@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
+ENV PORT=8000
 EXPOSE 80
 
 ENV ASPNETCORE_URLS=http://+:80
